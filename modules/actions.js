@@ -20,7 +20,7 @@ export default class Actions {
       list.appendChild(newRow);
     }
   }
-  
+
   static removeBook= (element) => {
     if (element.classList.contains('remove')) {
       element.parentElement.remove();
