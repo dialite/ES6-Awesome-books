@@ -3,12 +3,10 @@ import Data from './modules/data.js';
 import Actions from './modules/actions.js';
 import { DateTime } from './modules/luxon.js';
 
-
 setInterval(() => {
   const date = DateTime.now().toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS);
   document.getElementById('date').innerHTML = date;
-}, 1000)
-
+}, 1000);
 
 document.addEventListener('DOMContentLoaded', Actions.display);
 
