@@ -1,15 +1,13 @@
+import Data from './data.js';
 export default class Actions {
     static display= () => {
-      const books = Data.getLocalStorage();
-  
+      const books = Data.getLocalStorage();  
       books.forEach((book) => Actions.addBook(book));
-    }
-  
+    }  
     static addBook= (book) => {
       if (book.title !== undefined) {
         const list = document.querySelector('#book-list');
-        const newRow = document.createElement('tr');
-  
+        const newRow = document.createElement('tr');  
         newRow.innerHTML = `
         <li>"${book.title}"</li>
         <li>${'by'}</li>
@@ -19,8 +17,7 @@ export default class Actions {
   
         list.appendChild(newRow);
       }
-    }
-  
+    }  
     static removeBook= (element) => {
       if (element.classList.contains('remove')) {
         element.parentElement.remove();
